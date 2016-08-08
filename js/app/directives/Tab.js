@@ -19,7 +19,11 @@ function tab(){
         '<div ng-transclude></div>',
       '</div>'
     ].join(''),
-    link: function($scope,$element,$attrs,$ctrl){}
+    link: function($scope,$element,$attrs,$ctrl){
+      $scope.tab = { label: $scope.label, selected: false };
+
+      $ctrl.addTab($scope.tab);
+    }
   };
 }
 
